@@ -41,7 +41,6 @@ const showTODO = (todo) => {
         TODOActions.appendChild(editButton); 
     }
     
-
     const deleteButton = document.createElement("button");
     deleteButton.innerText = "Delete";
     deleteButton.addEventListener("click", () => deleteTODO(todo.id, TODOBar));
@@ -109,8 +108,7 @@ const editTODO = (id, TODODesc) => {
     
 };
 
-saveEditButton.addEventListener("click", (e) => {
-    e.preventDefault();
+saveEditButton.addEventListener("click", () => {
     const editedDesc = editInput.value.trim();
     if (editedDesc !== "" && currentEditId) {
         fetch(`http://localhost:3000/todos/${currentEditId}`, {
@@ -126,8 +124,7 @@ saveEditButton.addEventListener("click", (e) => {
     }
 })
 
-cancelEditButton.addEventListener("click", (e) => { 
-    e.preventDefault();
+cancelEditButton.addEventListener("click", () => { 
     closePopup();
     currentEditId = null; 
 })

@@ -29,7 +29,8 @@ body {
 }
 .input-container input {
     flex-grow: 1;
-    padding:4px;
+    padding: 4px;
+    border-radius: 5px;
 }
 
 .input-container button {
@@ -39,7 +40,7 @@ body {
 .content-container {
     display:flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
     margin-top: 40px;
     padding: 5px 50px 10px 50px;
 }
@@ -132,8 +133,6 @@ body {
 .edit-buttons button:hover {
     background-color:rgb(91, 118, 118);
 }
-
-
 
 body.pop-up-blur {
     overflow: hidden;

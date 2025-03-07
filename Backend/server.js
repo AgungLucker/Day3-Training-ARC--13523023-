@@ -31,7 +31,7 @@ app.get("/todos", (request, response) => {
 
 // POST
 app.post("/todos", (request, response)=> {
-    console.log("Menerima request POST ke /todos");
+    console.log("Accepting request POST to /todos");
     console.log("Body:", request.body);
 
     const newTODO = {id : uuid.v4(), ...request.body};
